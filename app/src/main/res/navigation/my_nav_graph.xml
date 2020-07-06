@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/my_nav_graph"
+    app:startDestination="@id/testHomeFragment">
+
+    <fixfragment
+        android:id="@+id/testHomeFragment"
+        android:name="com.mooc.ppjoke.ui.home.TestHomeFragment"
+        android:label="TestHomeFragment" >
+        <action
+            android:id="@+id/action_testHomeFragment_to_testDetailFragment"
+            app:destination="@id/testDetailFragment" />
+    </fixfragment>
+
+    <fixfragment
+        android:id="@+id/testDetailFragment"
+        android:name="com.mooc.ppjoke.ui.detail.TestDetailFragment"
+        android:label="TestDetailFragment" >
+        <action
+            android:id="@+id/action_testDetailFragment_to_testHomeFragment"
+            app:destination="@id/testHomeFragment" />
+    </fixfragment>
+</navigation>
